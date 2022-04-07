@@ -1,0 +1,52 @@
+<div class="container-fluid py-3">
+    <h1 class="display-5 fw-bold">ACTUALIZA BICICLETAS</h1>
+</div>
+
+<div class="container">
+    <form autocomplete="off" [formGroup]="formulario" (ngSubmit)="updateBike()">
+        
+        
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Codigo</label>
+            <div class="col-8">
+                <input type readonly="text" name="codigo" placeholder="requerido" formControlName="codigo">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Nombre</label>
+            <div class="col-8">
+                <input type="text" name="nombre" placeholder="requerido" formControlName="nombre">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Descripción</label>
+            <div class="col-8">
+                <input type="text" name="descripcion" placeholder="requerido" formControlName="descripcion">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Tipo</label>
+            <div class="col-8">
+                <input type="text" name="tipo" placeholder="requerido" formControlName="tipo">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Imagen</label>
+            <div class="col-8">
+                <input type="text" name="imagen" placeholder="requerido" formControlName="imagen">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">&nbsp;</label>
+            <div class="input-group col">
+              <button type="submit" class="btn btn-outline-primary btn-block">Grabar</button>
+              <a class="btn btn-outline-primary" [routerLink]="['/bicicleta']"> Volver</a>
+            </div>
+        </div>  
+
+    </form>
+</div>

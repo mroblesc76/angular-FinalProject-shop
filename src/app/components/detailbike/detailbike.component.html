@@ -1,0 +1,34 @@
+<!-- <p>detailbike works!</p> -->
+
+<div class="container-fluid py-3">
+    <h3 class="display-5 fw-bold">Estas mirando {{bike?.nombre}}</h3>
+</div>
+
+<!-- <label class="col-4 col-form-label"></label> -->
+
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="bike?.imagen" class="img-fluid">
+        <br><br>
+        
+        
+    </div>    
+    <div class="col-md-8">
+        <h3>código: {{bike?.codigo}}</h3>
+        <hr>
+        
+        <p> Descripción: {{bike?.descripcion}}</p>
+        <p> Tipo: {{bike?.tipo}}</p>
+
+        
+        <!-- [routerLink]="['/editbike']" [queryParams]="bike?.codigo" -->
+        <a class="btn btn-outline-primary" [routerLink]="['/editbike',id]">Editar</a>
+        <a class="btn btn-danger" (click)="deleteBike(bike?.codigo)"> Eliminar </a>
+        <a class="btn btn-outline-secondary" [routerLink]="['/bicicleta']"> Volver</a>
+
+    </div>
+    
+</div>
+
+
+

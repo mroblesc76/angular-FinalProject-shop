@@ -1,0 +1,13 @@
+<div class="card text-center">
+    <img class="card-img-top img-fluid" style="width:258px;height:155px" [src]="dataInput.imagen">
+    <div class="card-body">
+        <h5 class="card-title">{{dataInput.nombre}}</h5>
+        <p class="card-text">{{dataInput.codigo}}</p>
+        <p class="card-text">{{dataInput.descripcion}}</p>
+        <p class="card-text">{{dataInput.tipo}}</p>
+        <!-- <p class="card-text">{{dataInput.imagen}}</p> -->
+        <button class="btn btn-primary" (click)="detailBike(dataInput.codigo)">Ver detalle</button>
+        <hr>
+        <a class="btn btn-primary" (click)="buyBike()">Comprar</a>
+    </div>
+</div>
